@@ -36,6 +36,19 @@
   --nav-dropdown-color: #a8a9b4; /* Used for navigation links of the dropdown items in the navigation menu. */
   --nav-dropdown-hover-color: #ffffff; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
+.navmenu ul li a {
+  display: flex;
+  align-items: center;
+}
+
+.nav-icon {
+  font-size: 1.4rem;   /* Bigger icon size */
+  margin-right: 10px;  /* Space between icon and text */
+  line-height: 1;
+}
+.navmenu ul li a:hover {
+  color: var(--accent-color); /* Or any highlight color */
+}
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
@@ -898,6 +911,38 @@ section,
   transform: scale(1.1);
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.portfolio {
+  background: #fff;
+  padding: 10px;
+}
+
+.grid-wrapper {
+  column-count: 4; /* Change this to 2 or 4 based on your screen */
+  column-gap: 10px;
+}
+
+.grid-wrapper > div {
+  break-inside: avoid;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.grid-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+
 /*--------------------------------------------------------------
 # Services Section
 --------------------------------------------------------------*/
@@ -924,6 +969,19 @@ section,
   line-height: 0;
 }
 
+.portfolio .portfolio-content.align-right {
+  margin-left: auto;
+  margin-right: 0;
+  display: block;
+  max-width: 100%;
+  text-align: right;
+}
+.portfolio .row.align-items-end {
+  align-items: flex-start;
+  text-align: right;
+}
+
+
 .services .service-item:hover .icon {
   background: var(--surface-color);
 }
@@ -949,6 +1007,22 @@ section,
 .services .service-item .description {
   line-height: 24px;
   font-size: 14px;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.position-absolute {
+  position: absolute;
+}
+
+.top-0 {
+  top: 0;
+}
+
+.end-0 {
+  right: 0;
 }
 
 /*--------------------------------------------------------------
